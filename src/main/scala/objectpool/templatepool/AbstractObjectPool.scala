@@ -10,6 +10,11 @@ abstract class AbstractObjectPool[T](n: Int) extends ObjectPool[T] {
   protected val pool: mutable.Buffer[T] = createPool(n).toBuffer
 
   /**
+   * Para los tests.
+   * @return pool
+   */
+  def getPool: mutable.Buffer[T] = pool
+  /**
    * Metodo abstracto para crear pool
    * @return el pool creado
    */
